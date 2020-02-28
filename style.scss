@@ -1,0 +1,52 @@
+@mixin centerChild(){
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+body {
+    margin:0;
+    padding:0;
+    background-image: url('bg.jpg');
+}
+
+
+.keys {
+    @include centerChild();
+    display: flex;
+    justify-content: space-evenly;
+    width:90vw;
+    flex-wrap: wrap;
+
+}
+
+
+.key {
+    width:2.3em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    margin:2px;
+    border-radius: 20px;
+    background-color: rgba(29, 30, 31, 0.678);
+    color:rgb(255, 255, 255);
+    border: 7px solid rgb(0, 0, 0);
+    font-size:4em;
+    text-align: center;
+    transition: all 0.05s;
+    & p {
+        font-size:0.36em;
+        padding:0px;
+        margin:0px;
+        color:rgb(219, 167, 70);
+    }
+}
+
+
+.playing {
+    transform: scale(1.1);
+    border-color: rgb(255, 179, 0);
+    box-shadow: 0 0 10px rgb(255, 179, 0);
+}
