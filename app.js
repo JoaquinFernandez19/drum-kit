@@ -13,10 +13,14 @@ window.addEventListener('keydown',function(e){
 
 //mobile 
 window.addEventListener('click',function(e){
-    let currentKey = e.target.getAttribute("value");
-    if(currentKey === '65'){
+    let currentValue = e.target.getAttribute("value");
+
+    if(currentValue === '65'){
+        let key = document.querySelector('.style65');
+        key.classList.add('playing');
         audio65.currentTime = 0;
         audio65.play();
+
     }
 
 
