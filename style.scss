@@ -11,6 +11,7 @@ body {
     margin:0;
     padding:0;
     background-image: url('bg.jpg');
+    touch-action:none;
 }
 
 
@@ -41,6 +42,7 @@ body {
         padding:0px;
         margin:0px;
         color:rgb(219, 167, 70);
+        pointer-events: none;
     }
 }
 
@@ -49,4 +51,12 @@ body {
     transform: scale(1.1);
     border-color: rgb(255, 179, 0);
     box-shadow: 0 0 10px rgb(255, 179, 0);
+}
+
+
+@media (max-width: 700px){
+    .key {
+        width:1.7em;
+        font-size:3em;
+    }
 }
